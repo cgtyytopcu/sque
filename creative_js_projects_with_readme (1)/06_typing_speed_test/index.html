@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Typing Speed Test</title></head>
+<body>
+  <h2>Type the sentence:</h2>
+  <p id="sentence">The quick brown fox jumps over the lazy dog.</p>
+  <input id="input" type="text" oninput="checkTyping()">
+  <p id="result"></p>
+
+  <script>
+    const sentence = document.getElementById("sentence").innerText;
+    const input = document.getElementById("input");
+    const result = document.getElementById("result");
+    let startTime;
+
+    input.addEventListener("focus", () => startTime = new Date());
+
+    function checkTyping() {
+      if (input.value === sentence) {
+        const duration = (new Date() - startTime) / 1000;
+        result.innerText = `You took ${duration.toFixed(2)} seconds!`;
+      }
+    }
+  </script>
+</body>
+</html>

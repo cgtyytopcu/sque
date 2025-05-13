@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sound Button</title></head>
+<body>
+  <h1>Click to Play Sound</h1>
+  <button onclick="playSound()">Play</button>
+  <audio id="sound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+
+  <script>
+    function playSound() {
+      document.getElementById("sound").play();
+    }
+  </script>
+</body>
+</html>

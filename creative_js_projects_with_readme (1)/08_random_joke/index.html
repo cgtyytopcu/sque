@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Random Joke</title></head>
+<body>
+  <h1>Wanna Laugh?</h1>
+  <button onclick="getJoke()">Tell me a joke</button>
+  <p id="joke"></p>
+
+  <script>
+    const jokes = [
+      "Why don't scientists trust atoms? Because they make up everything!",
+      "I'm reading a book about anti-gravity. It's impossible to put down!",
+      "Why did the math book look sad? Because it had too many problems."
+    ];
+    function getJoke() {
+      const index = Math.floor(Math.random() * jokes.length);
+      document.getElementById("joke").innerText = jokes[index];
+    }
+  </script>
+</body>
+</html>
