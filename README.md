@@ -1,2 +1,2 @@
-# sque
+
 Everythings been code
